@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Encode_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 import Footer from "./_components/footer";
 import Header from "./_components/header";
 
@@ -23,14 +24,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
 
-        <div className="mt-[120px]">
-          {children}
-        </div>
+          <div className="min-h-[calc(100vh-56px)]">
+            {children}
+          </div>
 
-
-        <Footer />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

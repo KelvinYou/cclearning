@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 
 import { default as logo } from "./../logo.jpg";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export type MenuType = {
   id: string;
@@ -85,7 +86,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-primary backdrop-blur-lg ${
+        className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-[#fbe9f0] backdrop-blur-lg ${
           sticky
             ? "fixed transition to-primary/50"
             : "absolute to-transparent"
@@ -97,13 +98,10 @@ const Header: React.FC = () => {
               <Link
                 href="/"
                 className={`header-logo w-full flex items-center gap-2 ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
+                  sticky ? "py-5 lg:py-1" : "py-4"
                 } `}
               >
-                <Image src={logo.src} alt="Logo" className="w-9 h-9 object-contain" width={36} height={36}/>
-                <p className="text-white text-[18px] font-bold cursor-pointer flex">
-                  Clever Clogs Learning
-                </p>
+                <Image src={logo.src} alt="Logo" className="object-contain" width={72} height={72}/>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -218,7 +216,7 @@ const Header: React.FC = () => {
 
                           </>
                         )}
-                        <div className={`bg-gradient-to-r from-[#33bbcf] to-[#7de7eb] 
+                        <div className={`bg-gradient-to-r from-primary to-primary
                           h-1 rounded ${pathname === menuItem.path ? "lg:w-full w-0" : "w-0"} transition-width 
                           ease-in-out duration-200`}></div>
                       </li>
@@ -228,6 +226,8 @@ const Header: React.FC = () => {
                 </nav>
               </div>
             </div>
+
+            <ModeToggle />
           </div>
         </div>
       </header>
