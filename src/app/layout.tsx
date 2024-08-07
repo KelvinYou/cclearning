@@ -32,9 +32,9 @@ export default function RootLayout({
         >
           <Header />
 
-          <div className="mt-20 min-h-[calc(100vh-136px)]">
+          <main className="mt-20 min-h-[calc(100vh-136px)]">
             {children}
-          </div>
+          </main>
 
           <Footer />
         </ThemeProvider>

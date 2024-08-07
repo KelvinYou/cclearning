@@ -5,9 +5,12 @@ import dayjs from "dayjs";
 
 export default function Home() {
   return (
-    <main className="">
-      <SectionWrapper>
-        
+    <>
+      <SectionWrapper
+        id="home"
+        title="Pusat Tuisyen Inspirasi Bijaksana"
+        subtitle="Educate Every Student and Expect Excellence"
+      >
         coming soon
       </SectionWrapper>
       <SectionWrapper
@@ -20,10 +23,14 @@ export default function Home() {
               <Card key={tutor.name} className=" bg-[#fbe9f0]">
                 <CardHeader>
                   <CardTitle>{tutor.name}</CardTitle>
-                  <CardDescription>{tutor.qualification} ({tutor.graduateFromShort})</CardDescription>
+                  <CardDescription>
+                    {tutor.qualification} {" "}
+                    {tutor.graduateFromShort && `${`(${tutor.graduateFromShort})`}`}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p>{tutor.subjects.join(", ")}</p>
+                  <p>{tutor.teachingLevel?.join(', ')}</p>
                 </CardContent>
                 <CardFooter>
                   <p>{dayjs().diff(tutor.teachingSince, 'year')} years of teaching exp</p>
@@ -35,6 +42,6 @@ export default function Home() {
 
 
       </SectionWrapper>
-    </main>
+    </>
   );
 }
