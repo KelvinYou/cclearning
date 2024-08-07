@@ -1,9 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { tutors } from "@/data/tutors";
-import SectionWrapper from "@/hoc/section-wrapper";
+import { SectionWrapper } from "@/hoc";
 import dayjs from "dayjs";
-import { Metadata } from "next";
-
 
 export default function Home() {
   return (
