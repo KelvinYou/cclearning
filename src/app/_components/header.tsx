@@ -5,7 +5,7 @@ import { useParams, usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 
-import { default as logo } from "./../logo.jpg";
+import { default as logo } from "@/app/logo.jpg";
 import { ModeToggle } from "@/components/mode-toggle";
 
 export type MenuType = {
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
       <header
         className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-[#fbe9f0] backdrop-blur-lg ${
           sticky
-            ? "fixed transition to-primary/50"
+            ? "fixed transition to-[#fbe9f0]/50"
             : "absolute to-transparent"
         }`}
       >
@@ -98,10 +98,10 @@ const Header: React.FC = () => {
               <Link
                 href="/"
                 className={`header-logo w-full flex items-center gap-2 ${
-                  sticky ? "py-5 lg:py-1" : "py-4"
+                  sticky ? "py-5 lg:py-1" : "py-2"
                 } `}
               >
-                <Image src={logo.src} alt="Logo" className="object-contain" width={72} height={72}/>
+                <Image src={logo.src} alt="Logo" className="object-contain" width={96} height={72}/>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -113,17 +113,17 @@ const Header: React.FC = () => {
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 bg-primary ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px]  transition-all duration-300 bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px]  transition-all duration-300 bg-primary ${
                       navbarOpen ? "opacity-0 " : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px]  transition-all duration-300 bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-[30px]  transition-all duration-300 bg-primary ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
                     }`}
                   />
@@ -227,7 +227,7 @@ const Header: React.FC = () => {
               </div>
             </div>
 
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
         </div>
       </header>

@@ -26,13 +26,13 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <Header />
 
-          <div className="min-h-[calc(100vh-56px)]">
+          <div className="mt-20 min-h-[calc(100vh-136px)]">
             {children}
           </div>
 
