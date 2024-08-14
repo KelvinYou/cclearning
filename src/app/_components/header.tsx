@@ -21,12 +21,17 @@ export const menuData: MenuType[] = [
   {
     id: "home",
     title: "Home",
-    path: "/#home",
+    path: "/",
   },
   {
     id: "tutor",
     title: "Tutor",
     path: "/#tutor",
+  },
+  {
+    id: "registration",
+    title: "Registration",
+    path: "/registration",
   },
 ];
 
@@ -238,6 +243,8 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
+
+      <div className="h-20"></div>
     </>
   );
 };

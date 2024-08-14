@@ -34,12 +34,13 @@ export default function RootLayout({
 
           <main>
             <Header />
-              <div className="mt-20 min-h-[calc(100vh-136px)]">
-                {children}
-              </div>
+
+            <div className="min-h-[calc(100vh-136px)]">
+              {children}
+            </div>
+
             <Footer />
           </main>
-
 
           <Toaster />
         </ThemeProvider>

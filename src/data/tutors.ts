@@ -2,7 +2,7 @@
 
 import dayjs from "dayjs";
 
-type teachingLevel = "Primary" | "Lower Secondary" | "Secondary" | "Tertiary";
+type teachingLevel = "Primary" | "Lower Secondary";
 
 interface ITutor {
   name: string;
