@@ -98,7 +98,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-[#fbe9f0] backdrop-blur-lg ${
+        className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-primary/20 backdrop-blur-lg ${
           sticky
             ? "fixed transition to-[#fbe9f0]/50"
             : "absolute to-transparent"

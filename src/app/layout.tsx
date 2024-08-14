@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Encode_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import Footer from "./_components/footer";
-import Header from "./_components/header";
 import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,13 +31,7 @@ export default function RootLayout({
         >
 
           <main>
-            <Header />
-
-            <div className="min-h-[calc(100vh-136px)]">
-              {children}
-            </div>
-
-            <Footer />
+            {children}
           </main>
 
           <Toaster />
