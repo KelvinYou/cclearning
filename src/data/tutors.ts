@@ -26,7 +26,7 @@ export const tutors: ITutor[] = [
   },
   {
     name: "Cikgu Emyra",
-    qualification: "Bachelor of Education (Hons) Teaching of English As aA secondary Language",
+    qualification: "Bachelor of Education (Hons) Teaching of English As secondary Language",
     graduateFrom: "",
     graduateFromShort: "UNISEL",
     teachingSince: dayjs("2014-01-01").toDate(),
