@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Footer from "./_components/footer";
 import Header from "./_components/header";
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Encode_Sans({ weight: "400", subsets: ['latin'] })
@@ -30,13 +31,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
 
-          <main className="mt-20 min-h-[calc(100vh-136px)]">
-            {children}
+          <main>
+            <Header />
+              <div className="mt-20 min-h-[calc(100vh-136px)]">
+                {children}
+              </div>
+            <Footer />
           </main>
 
-          <Footer />
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
