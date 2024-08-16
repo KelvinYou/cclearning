@@ -20,7 +20,7 @@ export default function Home() {
         <div className="w-full grid gap-6 lg:grid-cols-3">
           {tutors.map((tutor) => {
             return (
-              <Card key={tutor.name} className=" bg-[#fbe9f0]">
+              <Card key={tutor.name} className=" border-primary shadow-md">
                 <CardHeader>
                   <CardTitle>{tutor.name}</CardTitle>
                   <CardDescription>
