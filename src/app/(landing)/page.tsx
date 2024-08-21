@@ -6,21 +6,22 @@ import dayjs from "dayjs";
 export default function Home() {
   return (
     <>
-      <SectionWrapper
+      {/* <SectionWrapper
         id="home"
         title="Pusat Tuisyen Inspirasi Bijaksana"
         subtitle="Educate Every Student and Expect Excellence"
       >
         coming soon
-      </SectionWrapper>
+      </SectionWrapper> */}
       <SectionWrapper
+        id="tutor"
         title="Explore Class Tutors,"
         subtitle="Get to know them."
       >
         <div className="w-full grid gap-6 lg:grid-cols-3">
           {tutors.map((tutor) => {
             return (
-              <Card key={tutor.name} className=" border-primary shadow-md">
+              <Card key={tutor.name} className="border-primary shadow-md">
                 <CardHeader>
                   <CardTitle>{tutor.name}</CardTitle>
                   <CardDescription>
