@@ -16,6 +16,7 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { toast } from "@/components/ui/use-toast"
 import { SchoolLevel } from "@/enums/schoolLevel"
+import { formRegistrationAvailability } from "@/constants/formRegistrationAvailability"
 
 const schoolLevelItems = Object.values(SchoolLevel).map((level) => ({
   value: level,
@@ -65,7 +66,7 @@ export function RegistrationForm() {
                       className="flex items-center space-x-3 space-y-0"
                     >
                       <FormControl>
-                        <RadioGroupItem value={item.value} />
+                        <RadioGroupItem value={item.value} disabled={!formRegistrationAvailability[item.value]}/>
                       </FormControl>
                       <FormLabel className="font-normal">
                         {item.label}

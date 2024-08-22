@@ -3,7 +3,7 @@ import { LevelAvailability } from "@/types/levelAvailability";
 
 export const formRegistrationAvailability: LevelAvailability = {
   [SchoolLevel.Primary1]: false,
-  [SchoolLevel.Primary2]: true,
+  [SchoolLevel.Primary2]: false,
   [SchoolLevel.Primary3]: true,
   [SchoolLevel.Primary4]: true,
   [SchoolLevel.Primary5]: true,
