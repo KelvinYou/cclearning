@@ -1,6 +1,9 @@
 import React from 'react'
 
-const LoginPage = () => {
+import { User } from '@prisma/client';
+
+const LoginPage: React.FC = () => {
+
   return (
     <div>
       login
