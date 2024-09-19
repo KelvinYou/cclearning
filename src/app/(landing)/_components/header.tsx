@@ -8,6 +8,7 @@ import { ExternalLink } from "lucide-react";
 import { default as logo } from "@/app/logo.jpg";
 import { ModeToggle } from "@/components/mode-toggle";
 import { removeHashFromPath } from "@/utils/pathUtils";
+import UserMenu from "./user-menu";
 
 export type MenuType = {
   id: string;
@@ -98,7 +99,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sm:px-16 px-6  left-0 top-0 z-30 flex w-full items-center bg-gradient-to-b from-primary/20 backdrop-blur-lg ${
+        className={`sm:px-16 px-6 left-0 top-0 z-30 flex w-full items-center backdrop-blur-lg border-b-[1px] ${
           sticky
             ? "fixed transition to-primary/5"
             : "absolute to-transparent"
@@ -116,7 +117,7 @@ const Header: React.FC = () => {
                 <Image src={logo.src} alt="Logo" className="object-contain" width={96} height={72}/>
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
+            {/* <div className="flex w-full items-center justify-between px-4">
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -237,9 +238,14 @@ const Header: React.FC = () => {
 
                 </nav>
               </div>
+            </div> */}
+
+            <div className="flex justify-center items-center gap-2">
+              <ModeToggle />
+              <UserMenu />
             </div>
 
-            {/* <ModeToggle /> */}
+
           </div>
         </div>
       </header>
