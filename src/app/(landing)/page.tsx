@@ -2,6 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { tutors } from "@/data/tutors";
 import { SectionWrapper } from "@/hoc";
 import dayjs from "dayjs";
+import FaqsSection from "./_components/faqs-section";
 
 export default function Home() {
   return (
@@ -40,9 +41,9 @@ export default function Home() {
             )
           })}
         </div>
-
-
       </SectionWrapper>
+
+      <FaqsSection />
     </>
   );
 }

@@ -19,13 +19,25 @@ const UserMenu: React.FC = () => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align='end'>
-        <DropdownMenuItem onClick={() => {}} className=' cursor-pointer'>
+        <DropdownMenuItem onClick={() => {}} className=' cursor-pointer' disabled>
           Sign Up
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => {}} className=' cursor-pointer'>
           Login
         </DropdownMenuItem>
+
+        {/* <DropdownMenuItem onClick={() => {}} className=' cursor-pointer'>
+          Tutor
+        </DropdownMenuItem>
+
+        <DropdownMenuItem onClick={() => {}} className=' cursor-pointer'>
+          Login
+        </DropdownMenuItem>
+
+        <DropdownMenuItem onClick={() => {}} className=' cursor-pointer'>
+          Login
+        </DropdownMenuItem> */}
       </DropdownMenuContent>
     </DropdownMenu>
   )
