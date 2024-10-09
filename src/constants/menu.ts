@@ -16,6 +16,10 @@ export const mainMenu: {
     label: "Career",
     path: "/career",
   },
+  {
+    label: "Contact Us",
+    path: "/contact-us",
+  },
   // {
   //   label: "Registration",
   //   path: "/registration",
