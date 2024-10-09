@@ -8,19 +8,20 @@ interface IProps {
   id?: string;
   title?: string;
   subtitle?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
 
-const SectionWrapper: React.FC<IProps> = ({ id, title, subtitle, children }) => {
+const SectionWrapper: React.FC<IProps> = ({ id, title, subtitle, children, className }) => {
   const containerVariants: Variants = staggerContainer();
-  
+
   return (
     <motion.section 
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className='sm:px-16 px-6 sm:pt-4 pt-2 pb-10 max-w-7xl mx-auto min-h-screen' 
+      className={`sm:px-16 px-6 sm:pt-4 pt-2 pb-10 max-w-7xl mx-auto ${className}`} 
     >
       <span id={id} className='-mt-20 pb-20 block w-0'></span>
       {title && <div className='flex justify-center items-center flex-col pb-10'>
