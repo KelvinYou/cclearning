@@ -3,6 +3,8 @@ import { tutors } from "@/data/tutors";
 import { SectionWrapper } from "@/hoc";
 import dayjs from "dayjs";
 import FaqsSection from "./_components/faqs-section";
+import CareerSection from "./_components/career-section";
+import ContactUsSection from "./_components/contact-us-section";
 
 export default function Home() {
   return (
@@ -44,6 +46,10 @@ export default function Home() {
       </SectionWrapper>
 
       <FaqsSection />
+
+      <CareerSection />
+
+      <ContactUsSection />
     </>
   );
 }
